@@ -146,4 +146,4 @@ morseToChar "/"       = ' '
 morseToChar _         = '?'
 
 morseToString :: String -> String
-morseToString = concatMap ((: []) . morseToChar) . words
+morseToString = map morseToChar . words
